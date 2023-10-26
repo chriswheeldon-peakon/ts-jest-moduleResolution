@@ -24,4 +24,4 @@ ts-jest resolves `import helmet from 'helmet'` to the `index.d.cts` artefact, wh
 
 I'm new to both codebases, but I've been tracing the module resolution locally and found that `tsc` and `ts-jest` invoke TypeScript's [resolveModuleName](https://github.com/microsoft/TypeScript/blob/6e4aa901f25ffa90096dc0cc1d0dd13243dec3e6/src/compiler/moduleNameResolver.ts#L1296) function differently. `tsc` passes `ModuleKind.ESNext` as the final `moduleResolution` argument whereas `ts-jest` [does not pass the argument at all](https://github.com/kulshekhar/ts-jest/blob/c40bc34625d63cccc0db7296e616af27868fe1fe/src/legacy/compiler/ts-compiler.ts#L397).
 
-I'm having some difficulty determining the exact logic that tsc uses to determine the `moduleResolution` argument but if I force the `moduleResolution` to `ESNext` then the tests are built successfully.
+I'm having some difficulty determining the exact logic that tsc uses to decide the `moduleResolution` argument but if I force the `moduleResolution` to `ESNext` in ts-jest then the tests are built successfully.
