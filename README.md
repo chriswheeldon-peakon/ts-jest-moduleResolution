@@ -9,7 +9,7 @@ ts-jest resolves `import helmet from 'helmet'` to the `index.d.cts` artefact, wh
   ● Test suite failed to run
 
     src/index.ts:4:3 - error TS2349: This expression is not callable.
-      Type 'typeof import("/Users/username/code/dev.to/app-esm-jest/node_modules/helmet/index")' has no call signatures.
+      Type 'typeof import("/node_modules/helmet/index")' has no call signatures.
 
     4   helmet();
 ```
