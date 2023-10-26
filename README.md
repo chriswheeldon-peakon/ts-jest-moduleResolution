@@ -2,7 +2,7 @@
 
 [helmet](https://github.com/helmetjs/helmet) is a popular hybrid (cjs + esm) module.
 
-ts-jest resolves `import helmet from 'helmet'` to the `index.d.cts` artefact, whereas the typescript compiler, when invoked directly, resolve it to the `index.d.mts` artefact. Consequently the tsc build succeeds but the ts-jest build fails with the following:
+ts-jest resolves `import helmet from 'helmet'` to the `index.d.cts` artefact, whereas the typescript compiler, when invoked directly, resolves it to the `index.d.mts` artefact. Consequently the tsc build succeeds but the ts-jest build fails with the following:
 
 ```
  FAIL  __test__/index.test.ts
